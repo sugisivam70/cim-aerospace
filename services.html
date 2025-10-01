@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service</title>
+    <link rel="icon" href="img/logo/Screenshot 2025-09-24 103228.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      .service-hero-content h2 span.letter,
+      .service-hero-content h1 span.letter {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp 0.6s ease-out forwards;
+        display: inline-block;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .service-hero {
+        background-image: url(bg/aerospace-industry-hero-banner.webp);
+        background-size: cover;
+        background-position: center;
+        padding: 100px 30px;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        text-align: left;
+      }
+
+      .service-hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-hero-content h2 {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.4;
+      }
+
+      .service-hero-content h2 span {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .bg-text {
+        font-size: 100px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+        bottom: 30px;
+        left: 30px;
+        color: #000000;
+      }
+
+      /* Service Section */
+      .services {
+        padding: 20px 0;
+        background: #f9f9f9;
+        text-align: center;
+        font-family: "Poppins", Arial, sans-serif;
+        background-image: url(/img/nav-logo/ChatGPT\ Image\ Jul\ 9\,\ 2025\,\ 10_51_47\ PM.png);
+      }
+
+      .section-title {
+        font-size: 42px;
+        margin-bottom: 40px;
+      }
+
+      .section-title span {
+        color: #007bff;
+      }
+
+      .service-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .service-box {
+        background: #f7f9fc;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+        flex: 1 1 280px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .service-box i {
+        color: #007bff;
+        margin-bottom: 15px;
+      }
+
+      .service-box h4 {
+        margin: 15px 0 10px;
+      }
+      .service-box p {
+        font-size: 0.95rem;
+        color: #6f6f6f;
+      }
+
+      .service-box.active,
+      .service-box:hover {
+        background: black;
+        color: #ffffff;
+      }
+      .service-box:hover p {
+        color: #bdbdbd;
+      }
+
+      .service-box.active i,
+      .service-box:hover i {
+        color: #007bff;
+      }
+
+      /* Expertise Section */
+      .expertise {
+        padding: 30px 0;
+        text-align: center;
+        background: #fff;
+        background-image: url(/img/hero/img\ bg.png);
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      .expertise-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .expert-box {
+        flex: 1 1 280px;
+      }
+
+      .expert-box img {
+        width: 100%;
+        border-radius: 10px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 15px;
+      }
+
+      .expert-box h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 10px 0;
+        color: #ff6b1a;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .service-hero-content h1 {
+          letter-spacing: -0.06em;
+        }
+
+        .service-box,
+        .expert-box {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* Hide menu toggle by default */
+      .menu-toggle {
+        display: none;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+          background: none;
+          border: none;
+          font-size: 2rem;
+          color: #1a73e8;
+          margin-left: 10px;
+          cursor: pointer;
+          z-index: 101;
+        }
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 70px; /* adjust if your navbar is taller/shorter */
+          left: 0;
+          width: 100%;
+          background: #fff;
+          flex-direction: column;
+          align-items: flex-start;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+          z-index: 100;
+          padding: 20px 0;
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .nav-links a {
+          width: 100%;
+          padding: 16px 24px;
+          border-bottom: 1px solid #eee;
+          font-size: 18px;
+          color: #1a73e8;
+          text-align: left;
+        }
+        .btn-yellow {
+          margin: 10px 24px;
+          width: calc(100% - 48px);
+          text-align: center;
+        }
+        .navbar {
+          flex-wrap: wrap;
+          padding: 16px 10px;
+          position: relative;
+        }
+      }
+
+      /* Desktop: always show nav-links */
+      @media (min-width: 769px) {
+        .nav-links {
+          display: flex !important;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          background: none;
+          box-shadow: none;
+          padding: 0;
+          width: auto;
+        }
+        .menu-toggle {
+          display: none !important;
+        }
+      }
+      /* Fade-up animation for service section */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .services {
+        opacity: 0;
+        transform: translateY(32px);
+        animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+        animation-delay: 0.2s;
+      }
+
+      /* Fade-up animation for feature section */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .features-section {
+        opacity: 0;
+        transform: translateY(32px);
+        animation: none;
+      }
+    </style>
+  </head>
+  <body>
+ <header class="navbar">
+      <div class="logo">
+        <img
+          src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+          alt=""
+        />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="Project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      <a
+          href="https://wa.me/918073383726?text=Hi%20SIM%20Aerospace!%20I%20am%20interested%20in%20your%20VMC%20solutions.%20Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>We provide <br /><span>Best Quality</span></h2>
+        <h1 class="bg-text">Services</h1>
+      </div>
+    </section>
+
+    <!-- Service Offerings -->
+    
+   
+<section class="features-section" id="feature">
+  <p class="section-label">Features</p>
+  <h2 class="section-title">
+    Stepping <span>Together</span> Towards Aerospace-Grade
+    <span>Innovation</span>
+  </h2>
+
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h3>Aerospace Precision Machining</h3>
+      <p>
+        Delivering micron-level accuracy for aerospace engine components,
+        turbine blades, and structural assemblies.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <h3>Advanced Multi-Axis VMC</h3>
+      <p>
+        Complex aerospace parts are produced using 3, 4, and 5-axis machining
+        tailored to mission-critical standards.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon">
+        <i class="fas fa-industry"></i>
+      </div>
+      <h3>High-Strength Materials</h3>
+      <p>
+        Expertise in machining titanium, Inconel, and aerospace-grade alloys to
+        ensure strength and durability in flight applications.
+      </p>
+    </div>
+  </div>
+</section>
+
+  
+<section class="features-section">
+  <div class="features-header">
+    <div class="feature-heading">
+      <div><h2>Features our Aerospace VMC Solutions Provide</h2></div>
+      <div>
+        <p>
+          We deliver unmatched accuracy, innovation, and reliability to meet
+          the strict demands of the aerospace industry.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-rocket"></i></div>
+      <h3>Aerospace Prototyping</h3>
+      <p>
+        Rapid development of aerospace components with precision VMC machining
+        for engines, turbines, and assemblies.
+      </p>
+      <a href="precision.html">Read more</a>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-cogs"></i></div>
+      <h3>Precision Engineering</h3>
+      <p>
+        Micron-level tolerances to meet mission-critical aerospace standards,
+        ensuring reliability and safety in flight.
+      </p>
+      <a href="precision.html">Read more</a>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Certified Quality</h3>
+      <p>
+        Compliance with aerospace certifications and rigorous testing for
+        every part manufactured.
+      </p>
+      <a href="Project.html">Read more</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="features-section">
+  <div class="features-header">
+    <div class="feature-heading">
+      <div>
+        <h2>Features that our Aerospace VMC Company Provides</h2>
+      </div>
+      <div>
+        <p>
+          We ensure aerospace-grade precision, reliability, and efficiency in
+          every machining project — from prototype to certified production.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+      <h3>Aerospace Precision Machining</h3>
+      <p>
+        Maintain exact tolerances across turbine blades, engine housings, and
+        structural aerospace components.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+      <h3>Global Collaboration</h3>
+      <p>
+        Work seamlessly with aerospace OEMs, engineers, and R&D teams to refine
+        designs and specifications.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+      <h3>Flexible Fabrication</h3>
+      <p>
+        Adaptable machining for aluminum, titanium, and composites with multiple
+        tooling setups and prototype revisions.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+      <h3>Streamlined Scheduling</h3>
+      <p>
+        Integrated project planning ensures timely production aligned with
+        aerospace supply chain demands.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-bell"></i></div>
+      <h3>Smart Monitoring</h3>
+      <p>
+        Automated alerts on machining cycles, inspection readiness, and quality
+        checks for critical parts.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+      <h3>Detailed Reporting</h3>
+      <p>
+        Comprehensive aerospace-grade quality documentation and production
+        reports for certification compliance.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+            alt="Aerospace VMC Logo"
+            class="logo"
+          />
+          <p>
+            Aerospace VMC Solutions delivers high-precision machining for
+            critical aerospace components. We specialize in complex tooling,
+            fixtures, and advanced milling solutions with unmatched accuracy and
+            reliability.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">Aerospace VMC Machining</a></li>
+            <li><a href="precision.html">Tooling & Fixtures</a></li>
+            <li><a href="precision.html">Prototype & Production</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Quality Policy</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          <a
+              href="https://wa.me/918073383726?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+             target=" _blank"
+              rel="noopener"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/aDXQcrM77zKSR34K7?g_st=iw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Address: #13/2/1, Kempapura, pipeline road, Chikkabanavara post Bangalore-560090
+
+            </a>
+          </p>
+          <p>
+            <a href="tel:+918123638613">
+              <i class="fas fa-phone-alt"></i> +91 80733 83726
+
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=cimaerospace2014@gmail.com&su=Aerospace%20Machining%20Enquiry&body=Hello%20Aerospace%20VMC%2C%0A%0AI%20am%20interested%20in%20your%20aerospace%20solutions.%20Please%20share%20more%20details%20with%20me.%0A%0ARegards%2C%0A[Your%20Name]"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fas fa-envelope"></i> cimaerospace2014@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. CIM Aerospace. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Service Hero h2 animation
+      const serviceHeroH2 = document.querySelector(".service-hero-content h2");
+      if (serviceHeroH2) {
+        // Split text into spans if not already done
+        if (!serviceHeroH2.querySelector("span.letter")) {
+          const html = serviceHeroH2.innerHTML;
+          // Split by <br> and animate each line
+          serviceHeroH2.innerHTML = "";
+          html.split("<br>").forEach((line, lineIdx) => {
+            if (lineIdx > 0)
+              serviceHeroH2.appendChild(document.createElement("br"));
+            line
+              .replace(/<[^>]+>/g, "")
+              .split("")
+              .forEach((char, i) => {
+                const span = document.createElement("span");
+                span.className = "letter";
+                span.textContent = char === " " ? "\u00A0" : char;
+                serviceHeroH2.appendChild(span);
+              });
+          });
+        }
+        serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+          span.style.opacity = 0;
+          span.style.transform = "translateY(-30px)";
+          span.style.animation = "none";
+        });
+        const observerH2 = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              serviceHeroH2
+                .querySelectorAll("span.letter")
+                .forEach((span, i) => {
+                  span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                  span.style.animationDelay = i * 0.06 + "s";
+                });
+            }
+          },
+          { threshold: 0.5 }
+        );
+        observerH2.observe(serviceHeroH2);
+      }
+
+      // Service Hero h1 animation
+      const serviceHeroH1 = document.querySelector(".service-hero-content h1");
+      if (serviceHeroH1) {
+        if (!serviceHeroH1.querySelector("span.letter")) {
+          const text = serviceHeroH1.textContent;
+          serviceHeroH1.innerHTML = "";
+          text.split("").forEach((char) => {
+            const span = document.createElement("span");
+            span.className = "letter";
+            span.textContent = char === " " ? "\u00A0" : char;
+            serviceHeroH1.appendChild(span);
+          });
+        }
+        serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+          span.style.opacity = 0;
+          span.style.transform = "translateY(-30px)";
+          span.style.animation = "none";
+        });
+        const observerH1 = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              serviceHeroH1
+                .querySelectorAll("span.letter")
+                .forEach((span, i) => {
+                  span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                  span.style.animationDelay = i * 0.06 + "s";
+                });
+            }
+          },
+          { threshold: 0.5 }
+        );
+        observerH1.observe(serviceHeroH1);
+      }
+    });
+
+    // /
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const servicesSection = document.querySelector(".services");
+      if (!servicesSection) return;
+      servicesSection.style.opacity = 0;
+      servicesSection.style.transform = "translateY(32px)";
+      const observer = new IntersectionObserver(
+        function (entries) {
+          if (entries[0].isIntersecting) {
+            servicesSection.style.animation =
+              "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+            servicesSection.style.animationDelay = "0.2s";
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(servicesSection);
+    });
+
+    // Fade-up animation for feature section
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(".features-section")
+        .forEach(function (featureSection) {
+          featureSection.style.opacity = 0;
+          featureSection.style.transform = "translateY(32px)";
+          const observer = new IntersectionObserver(
+            function (entries) {
+              if (entries[0].isIntersecting) {
+                featureSection.style.animation =
+                  "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+                featureSection.style.animationDelay = "0.2s";
+                observer.disconnect();
+              }
+            },
+            { threshold: 0.3 }
+          );
+          observer.observe(featureSection);
+        });
+    });
+  </script>
+</html>

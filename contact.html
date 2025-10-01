@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="icon" href="img/logo/Screenshot 2025-09-24 103228.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <style>
+    .service-hero-content h2 span.letter,
+    .service-hero-content h1 span.letter {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+      display: inline-block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-hero {
+      background: url(img/45412.jpg) no-repeat center center/cover;
+
+      padding: 100px 30px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: left;
+    }
+
+    .service-hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero-content h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .service-hero-content h2 span {
+      font-weight: 700;
+      color: #4c4c4c;
+    }
+
+    .bg-text {
+      font-size: 100px;
+      font-weight: 700;
+
+      margin: 0;
+      line-height: 1;
+      bottom: 30px;
+      left: 30px;
+      color: #313131;
+    }
+
+    .legacy-section {
+      color: #000000;
+      padding: 80px 60px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .legacy-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 60px;
+    }
+
+    .legacy-left {
+      flex: 1;
+    }
+
+    .legacy-left h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .legacy-left h2 span {
+      color: #3fa9f5;
+    }
+
+    .legacy-left p {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      background: #3fa9f5;
+      padding: 12px 20px;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary i {
+      margin-left: 8px;
+    }
+
+    .btn-primary:hover {
+      background: #2a7fb6;
+    }
+
+    /* Right side */
+    .legacy-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .legacy-card {
+      background: #16161d;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .legacy-card:hover {
+      background: #1f1f28;
+    }
+
+    .legacy-card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .legacy-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 5px 0 0;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+      color: #3fa9f5;
+      flex-shrink: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .legacy-container {
+        flex-direction: column;
+      }
+    }
+
+  
+    /* Make navbar fixed and ensure hero section is not hidden */
+  </style>
+  <body>
+ <header class="navbar">
+      <div class="logo">
+        <img
+          src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+          alt=""
+        />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="Project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+       <a
+          href="https://wa.me/918073383726?text=Hi%20SIM%20Aerospace!%20I%20am%20interested%20in%20your%20VMC%20solutions.%20Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>Let's <br /><span>Make an</span></h2>
+        <h1 class="bg-text">Contact</h1>
+      </div>
+    </section>
+
+   <section class="faq-section">
+  <div class="faq-left">
+    <span class="tag">Reliable Aerospace VMC</span>
+    <h2>Frequently Asked Questions</h2>
+    <p>
+      Contact us if you need immediate assistance or custom aerospace VMC solutions.
+    </p>
+  </div>
+
+  <div class="faq-right">
+    <div class="faq-item active">
+      <h4>01. What VMC services do you offer for aerospace components?</h4>
+      <p>
+        We provide high-precision VMC milling, turning, prototyping, batch production, and custom aerospace component machining services.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h4>02. How do I request a quote?</h4>
+      <p>
+        Submit your technical drawings or CAD models via our contact form or email, and we’ll provide a detailed quotation tailored to aerospace requirements.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h4>03. What is the lead time for aerospace projects?</h4>
+      <p>
+        Lead times vary based on component complexity, but most aerospace projects are completed within 10–20 business days.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h4>04. Can you work with specialized aerospace materials?</h4>
+      <p>
+        Yes, we can work with aluminum alloys, titanium, stainless steel, Inconel, and engineering plastics for aerospace applications.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h4>05. Do you offer post-processing or finishing?</h4>
+      <p>
+        We provide surface treatments like anodizing, polishing, heat treatment, coating, and laser marking to meet aerospace quality standards.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="legacy-section">
+  <div class="legacy-container">
+    <!-- Left Side -->
+    <div class="legacy-left">
+      <h2>Our Legacy of <span>Aerospace Excellence</span></h2>
+      <p>
+        From high-precision VMC machining to aerospace innovation, Genius Tech has
+        been recognized worldwide for its quality, reliability, and cutting-edge technology.
+      </p>
+      <a href="#" class="btn-primary">
+        Get Started <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Right Side -->
+    <div class="legacy-right">
+      <div class="legacy-card">
+        <h3>2024 Best Aerospace VMC Innovation Award</h3>
+        <p>Global Aerospace Manufacturing Excellence</p>
+        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+      </div>
+
+      <div class="legacy-card">
+        <h3>2023 Advanced Aerospace Automation Recognition</h3>
+        <p>International Industry 4.0 Awards</p>
+        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+      </div>
+
+      <div class="legacy-card">
+        <h3>2022 Precision Aerospace Engineering Excellence</h3>
+        <p>National Aerospace CNC Awards</p>
+        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+      </div>
+
+      <div class="legacy-card">
+        <h3>2021 Leading Aerospace VMC Manufacturer</h3>
+        <p>Asia-Pacific Innovation Summit</p>
+        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+            alt="Aerospace VMC Logo"
+            class="logo"
+          />
+          <p>
+            Aerospace VMC Solutions delivers high-precision machining for
+            critical aerospace components. We specialize in complex tooling,
+            fixtures, and advanced milling solutions with unmatched accuracy and
+            reliability.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">Aerospace VMC Machining</a></li>
+            <li><a href="precision.html">Tooling & Fixtures</a></li>
+            <li><a href="precision.html">Prototype & Production</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Quality Policy</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          <a
+              href="https://wa.me/918073383726?text=Hi%20CIM%20Aerospace!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+             target=" _blank"
+              rel="noopener"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/aDXQcrM77zKSR34K7?g_st=iw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Address: #13/2/1, Kempapura, pipeline road, Chikkabanavara post Bangalore-560090
+
+            </a>
+          </p>
+          <p>
+            <a href="tel:+918123638613">
+              <i class="fas fa-phone-alt"></i> +91 80733 83726
+
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=cimaerospace2014@gmail.com&su=Aerospace%20Machining%20Enquiry&body=Hello%20Aerospace%20VMC%2C%0A%0AI%20am%20interested%20in%20your%20aerospace%20solutions.%20Please%20share%20more%20details%20with%20me.%0A%0ARegards%2C%0A[Your%20Name]"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fas fa-envelope"></i> cimaerospace2014@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. CIM Aerospace. All rights reserved.</p>
+      </div>
+    </footer>
+  
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+    <script>
+
+
+
+
+
+
+
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Service Hero h2 animation
+        const serviceHeroH2 = document.querySelector(
+          ".service-hero-content h2"
+        );
+        if (serviceHeroH2) {
+          // Split text into spans if not already done
+          if (!serviceHeroH2.querySelector("span.letter")) {
+            const html = serviceHeroH2.innerHTML;
+            // Split by <br> and animate each line
+            serviceHeroH2.innerHTML = "";
+            html.split("<br>").forEach((line, lineIdx) => {
+              if (lineIdx > 0)
+                serviceHeroH2.appendChild(document.createElement("br"));
+              line
+                .replace(/<[^>]+>/g, "")
+                .split("")
+                .forEach((char, i) => {
+                  const span = document.createElement("span");
+                  span.className = "letter";
+                  span.textContent = char === " " ? "\u00A0" : char;
+                  serviceHeroH2.appendChild(span);
+                });
+            });
+          }
+          serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH2 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH2
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 }
+          );
+          observerH2.observe(serviceHeroH2);
+        }
+
+        // Service Hero h1 animation
+        const serviceHeroH1 = document.querySelector(
+          ".service-hero-content h1"
+        );
+        if (serviceHeroH1) {
+          if (!serviceHeroH1.querySelector("span.letter")) {
+            const text = serviceHeroH1.textContent;
+            serviceHeroH1.innerHTML = "";
+            text.split("").forEach((char) => {
+              const span = document.createElement("span");
+              span.className = "letter";
+              span.textContent = char === " " ? "\u00A0" : char;
+              serviceHeroH1.appendChild(span);
+            });
+          }
+          serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH1 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH1
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 }
+          );
+          observerH1.observe(serviceHeroH1);
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
