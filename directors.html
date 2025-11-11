@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cim Areospace</title>
+    <link rel="icon" href="img/logo/Screenshot 2025-09-24 103228.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --accent-1: #7bd24a; /* green */
+        --accent-2: #08b0e6; /* blue */
+        --accent-3: #ffd400; /* yellow */
+        --text: #333;
+        --muted: #8c8c8c;
+        --maxw: 1200px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", system-ui, -apple-system, Arial, sans-serif;
+        margin: 0;
+        color: var(--text);
+        background: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 40px auto;
+        padding: 2rem 24px;
+      }
+
+      /* Top three-member row */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        align-items: start;
+      }
+      .member {
+        text-align: center;
+        padding-top: 10px;
+      }
+      .avatar {
+        margin: 0 auto 18px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      }
+      .avatar img {
+        width: 116%;
+        height: 116%;
+        object-fit: contain;
+        border-radius: 50%;
+
+        display: block;
+      }
+      .name {
+        font-weight: 700;
+        font-size: 20px;
+        margin: 6px 0;
+      }
+      .title {
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.45;
+        margin: 0 16px;
+      }
+
+      /* colored background variants */
+      .avatar.accent-1 {
+        background: var(--accent-1);
+      }
+      .avatar.accent-2 {
+        background: var(--accent-2);
+      }
+      .avatar.accent-3 {
+        background: var(--accent-3);
+      }
+
+      /* Lower section with large avatar + content */
+      .detail {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 48px;
+        align-items: start;
+        margin-top: 80px;
+      }
+      .detail .avatar.large {
+        width: 260px;
+        height: 260px;
+      }
+      .detail .avatar.large img {
+        width: 86%;
+        height: 86%;
+      }
+      .bio {
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.8;
+      }
+
+      /* responsive */
+      @media (max-width: 900px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail {
+          grid-template-columns: 1fr;
+        }
+        .detail .avatar.large {
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+        .avatar {
+          width: 120px;
+          height: 120px;
+        }
+        .detail {
+          gap: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+          alt=""
+        />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <div class="dropdown">
+          <a href="index.html" class="dropdown-toggle">About ></a>
+          <div class="dropdown-menu">
+            <a href="facilities.html">Facilities & Capabilities</a>
+            <a href="directors.html">Directors</a>
+          </div>
+        </div>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <div class="dropdown">
+          <a href="Project.html" class="dropdown-toggle">Project</a>
+        </div>
+        <a href="client.html">Clients</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/919480153367?text=Hi%20SIM%20Aerospace!%20I%20am%20interested%20in%20your%20VMC%20solutions.%20Can%20you%20provide%20more%20details? "
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <div class="wrap">
+      <h1 class="about-animated-text">OUR MANAGEMENT</h1>
+      <!-- Top row: 3 team members -->
+      <section class="team-grid" aria-label="Leadership team">
+        <article class="member">
+          <div class="avatar accent-1">
+            <!-- replace src with your specific image file for each person -->
+            <img
+              src="img/directors/WhatsApp Image 2025-11-07 at 13.33.18_4a1a2b81.jpg"
+              alt="Pratik Kumar"
+            />
+          </div>
+          <h3 class="name">Pratik Kumar</h3>
+          <p class="title">
+            CEO – CIM AREOSPACE &amp; Executive Director – CIM Enterprises (P)
+            Limited
+          </p>
+        </article>
+
+        <article class="member">
+          <div class="avatar accent-2">
+            <img
+              src="/mnt/data/b0a43a80-5b9a-405c-b03b-e66549db5a08.png"
+              alt="Ronen Givon"
+            />
+          </div>
+     
+        </article>
+
+        <article class="member">
+          <div class="avatar accent-3">
+            <img
+              src="/mnt/data/b0a43a80-5b9a-405c-b03b-e66549db5a08.png"
+              alt="Srinivas Devareddy"
+            />
+          </div>
+        </article>
+      </section>
+
+      <!-- Lower section: larger avatar on left and detailed bio on right -->
+      <section class="detail">
+        <div>
+          <div class="avatar large accent-1">
+            <img
+              src="img/directors/WhatsApp Image 2025-11-07 at 13.33.18_4a1a2b81.jpg"
+              alt="Pratik Kumar large"
+            />
+          </div>
+        </div>
+        <div class="bio">
+          <h3 style="margin-top: 0; font-size: 22px; color: var(--text)">
+            Putta raja
+          </h3>
+          <p>
+            Putta Raja is the visionary owner of CIMAerospace, a company
+            recognized for its commitment to innovation, precision, and
+            excellence in the aerospace sector. Under his leadership, the
+            company has grown into a trusted name known for delivering
+            high-quality engineering and manufacturing solutions worldwide.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="logo/WhatsApp Image 2025-09-26 at 10.34.01_32ccc002.jpg"
+            alt="Aerospace VMC Logo"
+            class="logo"
+          />
+          <p>
+            CIM Aerospace VMC Solutions delivers high-precision machining for
+            critical aerospace components. We specialize in complex tooling,
+            fixtures, and advanced milling solutions with unmatched accuracy and
+            reliability.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">Aerospace VMC Machining</a></li>
+            <li><a href="precision.html">Tooling & Fixtures</a></li>
+            <li><a href="precision.html">Prototype & Production</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Quality Policy</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/919480153367?text=Hi%20CIM%20Aerospace!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+              target=" _blank"
+              rel="noopener"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/aDXQcrM77zKSR34K7?g_st=iw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Address: #13/2/1, Kempapura, pipeline road, Chikkabanavara post
+              Bangalore-560090
+            </a>
+          </p>
+          <p>
+            <a href="tel:+919480153367" rel="noopener" target="_blank">
+              <i class="fas fa-phone-alt"></i>+91 9480153367
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=cimaerospace2014@gmail.com&su=Aerospace%20Machining%20Enquiry&body=Hello%20Aerospace%20VMC%2C%0A%0AI%20am%20interested%20in%20your%20aerospace%20solutions.%20Please%20share%20more%20details%20with%20me.%0A%0ARegards%2C%0A[Your%20Name]"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fas fa-envelope"></i> cimaerospace2014@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. CIM Aerospace. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

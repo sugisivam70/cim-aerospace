@@ -32,6 +32,47 @@ html {
   display: none;
 }
 
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  color: var(--text-body);
+
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--light-bg);
+  color: var(--accent-blue);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -185,6 +226,7 @@ nav a.active {
 
 /* Hero Section */
 .hero {
+  min-height: 100vh;
   padding: 140px 60px 60px;
   text-align: left;
   background-image: url();
@@ -192,6 +234,9 @@ nav a.active {
   background-position: center;
   margin-bottom: 1.5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .bgimg {
   position: absolute;
@@ -217,7 +262,9 @@ nav a.active {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: "poppins" sans-serif;
+  font-family: "poppins", sans-serif;
+  min-height: 60vh;
+  max-height: 800px;
 }
 
 .hero-left {
@@ -249,6 +296,7 @@ nav a.active {
 
 .hero-image img {
   max-width: 500px;
+  max-height: 500px;
   border-radius: 12px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   filter: opacity(0.8);
@@ -318,6 +366,7 @@ nav a.active {
 /* abt */
 @media (max-width: 700px) {
   .hero {
+    min-height: 100vh;
     padding: 90px 10px 30px 10px;
     text-align: center;
     border-radius: 16px;
@@ -880,7 +929,8 @@ a {
 }
 
 .video-wrapper {
-  background: url("abt/Digital-turnaround-in-aerospace-headerimage.jpg") center/cover no-repeat;
+  background: url("abt/Digital-turnaround-in-aerospace-headerimage.jpg")
+    center/cover no-repeat;
   border-radius: 40px;
   width: 100%;
   max-width: 600px;
@@ -2126,4 +2176,110 @@ a {
   border-top: 1px solid #222;
   padding-top: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+/* Clients section styles (matches site palette) */
+.clients-section {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #ffffff, #f4f7fa);
+  color: var(--text-dark);
+}
+.clients-section .container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  text-align: center;
+}
+.clients-section .section-label {
+  font-size: 13px;
+  color: var(--muted, #6b7280);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.clients-section .section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--brand, #1c1c1c);
+  margin-bottom: 22px;
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 18px;
+}
+.client-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 18px rgba(18, 38, 63, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.client-img {
+  width: 220px;
+  height: 120px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(7, 21, 43, 0.08);
+}
+.client-caption {
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+  font-size: 14px;
+}
+.clients-cta {
+  margin-top: 26px;
+}
+.clients-cta .btn-primary {
+  background: var(--accent-blue);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.clients-cta .btn-primary:hover {
+  background: #004a7a;
+}
+
+/* background images for each card (replace paths if needed) */
+.client-img-1 {
+  background-image: url("img/client/WhatsApp\ Image\ 2025-11-06\ at\ 13.26.20_3893f4e0.jpg");
+}
+.client-img-2 {
+  background-image: url("img/client/WhatsApp\ Image\ 2025-11-06\ at\ 15.51.07_0c96412c.jpg");
+}
+.client-img-3 {
+  background-image: url("img/client/WhatsApp\ Image\ 2025-11-06\ at\ 15.51.07_56f7dbdc.jpg");
+}
+.client-img-4 {
+  background-image: url("cim-images/client4.jpg");
+}
+.client-img-5 {
+  background-image: url("cim-images/client5.jpg");
+}
+
+@media (max-width: 900px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+  .client-img {
+    width: 100%;
+    max-width: 420px;
+    height: 160px;
+  }
 }
